@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--
+        FONTOS! Vegyuk eszre, illetve nezzuk meg, hogy a horizontalisan
+        kozepre igazitas a constraint-ekkel csak akkor jut ervenyre,
+        ha a layout_width erteke wrap_content!
+
+        Ha a layout_width erteke match_parent, akkor a GridLayout mindenkeppen
+        kinyulik a teljes kepernyo szelessegere es ilyenkor hiaba minden trukk,
+        amivel a grid sorait kozepre akarnank huzni.
+
+        Csak az a jo kombinacio, ha a layout_width erteke wrap kontent es a left/right
+        contstraint-ek a parenthez vannak igazitva.
+
+        Ugyanaez igaz termeszetesen a layout_height=wrap_content es a top/bottom
+        constraint-ekre is.
+    -->
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="3"
+        android:rowCount="5">
+
+
+        <ImageView
+            android:id="@+id/img0"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/cupcake"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/donut"
+            android:layout_row="0"
+            android:layout_column="1"/>
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/eclair"
+            android:layout_row="0"
+            android:layout_column="2"/>
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/froyo"
+            android:layout_row="1"
+            android:layout_column="0"/>
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/gingerbread"
+            android:layout_row="1"
+            android:layout_column="1"/>
+
+        <ImageView
+            android:id="@+id/img5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/honeycomb"
+            android:layout_row="1"
+            android:layout_column="2"/>
+
+        <ImageView
+            android:id="@+id/img6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ics"/>
+
+        <ImageView
+            android:id="@+id/img7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/jelly_bean"/>
+
+        <ImageView
+            android:id="@+id/img8"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/kit_kat"
+            android:layout_gravity="right"/>
+
+        <ImageView
+            android:id="@+id/img9"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/lollipop"/>
+
+        <ImageView
+            android:id="@+id/img10"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/marshmallow"/>
+
+        <ImageView
+            android:id="@+id/img11"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/nougat"
+            android:layout_gravity="right"/>
+
+        <ImageView
+            android:id="@+id/img12"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/oreo"/>
+
+        <ImageView
+            android:id="@+id/img13"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/pie"
+            android:layout_gravity="center_horizontal"/>
+
+        <ImageView
+            android:id="@+id/img14"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/android_10"
+            android:layout_gravity="right"/>
+
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Layout: activity_main.xml"
+        android:layout_gravity="center_horizontal"/>
+</FrameLayout>
